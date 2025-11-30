@@ -123,6 +123,14 @@ button { border: none; background: none; cursor: pointer; font-family: 'Lato', s
     color: var(--text-light);
     margin-bottom: 40px;
 }
+
+/* Gaya baru untuk menyejajarkan tombol */
+.cta-buttons {
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+}
+
 .btn-collaborate {
     background-color: var(--accent-color);
     color: var(--card-bg);
@@ -294,6 +302,10 @@ button { border: none; background: none; cursor: pointer; font-family: 'Lato', s
     .hero-content h1 { font-size: 2.5rem; }
     .hero-illustration { order: 1; }
     .hero-content { order: 2; }
+    /* Menyejajarkan tombol di tengah untuk tampilan mobile */
+    .cta-buttons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
