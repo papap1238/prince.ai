@@ -1,11 +1,4 @@
-// =======================================================================
-// !!! PERINGATAN KEAMANAN !!!
-// Kunci API yang diletakkan di kode frontend (JavaScript) akan terlihat
-// oleh siapa pun yang melihat sumber halaman Anda di GitHub Pages.
-// =======================================================================
-const GEMINI_API_KEY = "GANTI_DENGAN_KUNCI_API_GEMINI_ANDA_DI_SINI"; 
-// =======================================================================
-
+const GEMINI_API_KEY = "AIzaSyBVgGiZz8DEdHhWO9z5qWm8eMd8JAMLadI"; 
 const chatHistory = document.getElementById('chat-history');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
@@ -92,4 +85,5 @@ if (chatHistory && userInput && sendButton) {
             sendMessage();
         }
     });
+
 }
