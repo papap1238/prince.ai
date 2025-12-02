@@ -197,9 +197,9 @@
                 conversationHistory.push({ role: 'model', parts: [{ text: botResponse }] });
 
             } catch (error) {
-                console.error("Kesalahan API Gemini:", error);
+                console.error("Jaringan", error);
                 chatHistory.removeChild(loadingMessageDiv); 
-                appendMessage(`Terjadi kesalahan: ${error.message}. Cek konsol browser untuk detail.`, 'bot');
+                appendMessage(`Terjadi kesalahan ${error.message}. Cek kuota anda.`, 'bot');
                 // Hapus pesan pengguna terakhir dari riwayat agar bisa dicoba lagi
                 conversationHistory.pop(); 
             } finally {
@@ -222,3 +222,4 @@
 </body>
 
 </html>
+
