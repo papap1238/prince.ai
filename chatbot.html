@@ -184,7 +184,7 @@
                 });
 
                 if (!response.ok) {
-                    throw new Error(`Gemini API error: ${response.statusText}`);
+                    throw new Error(`jaringan${response.statusText}`);
                 }
 
                 const data = await response.json();
@@ -222,4 +222,5 @@
 </body>
 
 </html>
+
 
