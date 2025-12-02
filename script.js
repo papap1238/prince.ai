@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = "AIzaSyBVgGiZz8DEdHhWO9z5qWm8eMd8JAMLadI"; 
+const GEMINI_API_KEY = ""; 
 const chatHistory = document.getElementById('chat-history');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
@@ -87,4 +87,5 @@ if (chatHistory && userInput && sendButton) {
     });
 
 }
+
 
