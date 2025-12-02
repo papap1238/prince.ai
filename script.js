@@ -56,14 +56,14 @@ if (chatHistory && userInput && sendButton) {
             });
 
             if (!response.ok) {
-                throw new Error(`Gemini API error: ${response.statusText}`);
+                throw new Error(`Jaringan ${response.statusText}`);
             }
 
             const data = await response.json();
             
             chatHistory.removeChild(loadingMessageDiv);
 
-            const botResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "Maaf, saya gagal mendapatkan respons dari Gemini.";
+            const botResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "Maaf, saya gagal mendapatkan respons.";
             
             appendMessage(botResponse, 'bot');
             conversationHistory.push({ role: 'model', parts: [{ text: botResponse }] });
@@ -71,7 +71,7 @@ if (chatHistory && userInput && sendButton) {
         } catch (error) {
             console.error("Kesalahan API Gemini:", error);
             chatHistory.removeChild(loadingMessageDiv); 
-            appendMessage(`Terjadi kesalahan: ${error.message}. Cek konsol browser untuk detail.`, 'bot');
+            appendMessage(`Terjadi kesalahan ${error.message}. Cek kuota anda`, 'bot');
             conversationHistory.pop(); 
         } finally {
             sendButton.disabled = false; 
@@ -87,3 +87,4 @@ if (chatHistory && userInput && sendButton) {
     });
 
 }
+
